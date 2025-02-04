@@ -36,6 +36,7 @@ const navigations = [
       { name: "Roles", path: "/material/roles", iconText: "R" },
       { name: "Dictionary", path: "/material/dictionary", iconText: "D" },
       { name: "Attributes", path: "/material/attributes", iconText: "A" },
+      { name: "Value List", path: "/material/value-list", iconText: "V" },
 
       { name: "Table", path: "/material/table", iconText: "T" }
     ]

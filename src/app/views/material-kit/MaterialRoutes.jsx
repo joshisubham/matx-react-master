@@ -20,6 +20,7 @@ const AppAttributes = Loadable(lazy(() => import("./attributes/AppAttributes")))
 const AppDictionary = Loadable(lazy(() => import("./dictionary/AppDictionary")));
 const AppUsers = Loadable(lazy(() => import("./users/AppUsers")));
 const AppRoles = Loadable(lazy(() => import("./roles/AppRoles")));
+const AppValueList = Loadable(lazy(() => import("./value-list/AppValueList")));
 
 const AppAutoComplete = Loadable(lazy(() => import("./auto-complete/AppAutoComplete")));
 const AppExpansionPanel = Loadable(lazy(() => import("./expansion-panel/AppExpansionPanel")));
@@ -44,7 +45,8 @@ const materialRoutes = [
   { path: "/material/users", element: <AppUsers /> },
   { path: "/material/roles", element: <AppRoles /> },
   { path: "/material/dictionary", element: <AppDictionary /> },
-  { path: "/material/attributes", element: <AppAttributes /> }
+  { path: "/material/attributes", element: <AppAttributes /> },
+  { path: "/material/value-list", element: <AppValueList /> }
 ];
 
 export default materialRoutes;

@@ -127,6 +127,9 @@ export default function PaginationTable() {
                 <TableCell align="center">${subscriber.amount}</TableCell>
                 <TableCell align="right">
                   <IconButton>
+                    <Icon color="primary">edit</Icon>
+                  </IconButton>
+                  <IconButton>
                     <Icon color="error">close</Icon>
                   </IconButton>
                 </TableCell>
