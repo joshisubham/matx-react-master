@@ -15,7 +15,7 @@ const Container = styled("div")(({ theme }) => ({
   }
 }));
 
-const AppRichEditor = () => {
+const RichEditor = () => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const isMounted = useRef(false); // useRef for tracking mounting
 

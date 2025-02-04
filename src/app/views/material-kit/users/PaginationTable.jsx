@@ -130,7 +130,7 @@ export default function PaginationTable() {
                     <Icon color="primary">edit</Icon>
                   </IconButton>
                   <IconButton>
-                    <Icon color="error">close</Icon>
+                    <Icon color="error">delete</Icon>
                   </IconButton>
                 </TableCell>
               </TableRow>
