@@ -1,6 +1,7 @@
 import { Box, Icon, IconButton, styled } from "@mui/material";
 import PaginationTable from "./PaginationTable";
 import { Breadcrumb, SimpleCard } from "app/components";
+import SimpleCardHeading from "app/components/SimpleCardHeading";
 
 // STYLED COMPONENTS
 const Container = styled("div")(({ theme }) => ({
@@ -13,20 +14,17 @@ const Container = styled("div")(({ theme }) => ({
 }));
 
 export default function AppUsers() {
+  const addClickFunc = function addClick() {
+    console.log("Add Users clicked");
+  };
   return (
     <Container>
       <Box className="breadcrumb">
         <Breadcrumb routeSegments={[{ name: "Material", path: "/material" }, { name: "Table" }]} />
       </Box>
-      <SimpleCard title="Pagination Table">
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span></span>
-          <IconButton color="primary" onClick={() => console.log("Add clicked")}>
-            <Icon color="primary">add</Icon>
-          </IconButton>
-        </div>
+      <SimpleCardHeading title="Pagination Table" addAction={addClickFunc}>
         <PaginationTable />
-      </SimpleCard>
+      </SimpleCardHeading>
     </Container>
   );
 }

@@ -2,6 +2,7 @@ import { Box, styled } from "@mui/material";
 import SimpleTable from "./SimpleTable";
 import PaginationTable from "./PaginationTable";
 import { Breadcrumb, SimpleCard } from "app/components";
+import SimpleCardHeading from "app/components/SimpleCardHeading";
 
 // STYLED COMPONENTS
 const Container = styled("div")(({ theme }) => ({
@@ -14,19 +15,18 @@ const Container = styled("div")(({ theme }) => ({
 }));
 
 export default function AppDictionary() {
+  const addClickFunc = function addClick() {
+    console.log("Add Dictionary clicked");
+  };
   return (
     <Container>
       <Box className="breadcrumb">
         <Breadcrumb routeSegments={[{ name: "Material", path: "/material" }, { name: "Table" }]} />
       </Box>
 
-      <SimpleCard title="Simple Table">
-        <SimpleTable />
-      </SimpleCard>
-
-      <SimpleCard title="Pagination Table">
+      <SimpleCardHeading title="Pagination Table" addAction={addClickFunc}>
         <PaginationTable />
-      </SimpleCard>
+      </SimpleCardHeading>
     </Container>
   );
 }
